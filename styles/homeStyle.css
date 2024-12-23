@@ -1,0 +1,66 @@
+
+.description {
+    margin-left: 5%;
+    max-width: 55%;
+    float: left;
+}
+
+.description p {
+    font-size: 1em;
+    font-style: normal;
+}
+
+img {
+    max-width: 350px;
+    float: left;
+    margin: 20px;
+}
+
+
+
+ul {
+    margin-top: 7%;
+    font-size: 1.2em;
+}
+
+ul h3 {
+    margin: 0;
+}
+
+
+
+
+.contacts {
+
+
+    
+    float: right;
+    margin: 5%;
+}
+
+
+
+
+/* MOBILE AND MEDIA */ 
+
+@media screen and (max-width: 900px) {
+
+    nav {
+        margin: 0;
+      }
+      
+      
+      nav li {
+        display: block;
+        float: none;
+        margin-left: 40%;
+        font-size: 1.1em;
+      }
+
+      #title {
+        font-size: 1.5em;
+      }
+}
+
+
+
