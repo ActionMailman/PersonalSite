@@ -10,6 +10,8 @@ body {
 }
 
 a {
+  display: block;
+  block-size: auto;
   color: white;
   text-decoration: underline;
 }
@@ -41,8 +43,10 @@ nav li {
 }
 
 #title {
+  display: block;
   font-size: 1.5em;
   float:none;
+  max-width: 100px;
 }
 
 /* Animations */
@@ -56,3 +60,28 @@ body {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+
+/* MOBILE AND MEDIA */ 
+
+@media (max-width: 500px) {
+
+  nav {
+      margin: 0;
+    }
+    
+    
+    nav li {
+      display: block;
+      float: none;
+      font-size: 1.1em;
+      max-width: 30%;
+      margin: auto;
+    }
+
+    #title {
+      font-size: 1.5em;
+      max-width: 30%;
+    }
+}
+

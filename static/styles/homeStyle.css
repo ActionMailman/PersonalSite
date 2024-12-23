@@ -43,23 +43,21 @@ ul h3 {
 
 /* MOBILE AND MEDIA */ 
 
-@media screen and (max-width: 900px) {
+@media (max-width: 500px) {
+    .description {
+        max-width: 90%;
 
-    nav {
+    }
+    
+    .description img {
         margin: 0;
-      }
-      
-      
-      nav li {
-        display: block;
-        float: none;
-        margin-left: 40%;
-        font-size: 1.1em;
-      }
+    }
 
-      #title {
-        font-size: 1.5em;
-      }
+    .contacts {
+        float: none;
+        margin-top: 5vh;
+    }
+   
 }
 
 
