@@ -6,15 +6,14 @@ const reading_list: string[] = ['Useful Readings', 'Weapons of Math Destruction 
 
 // index variable for the typewriter and the finished list of items in a randomized array
 let i: number = 0;
-let array_index: number = 0;
-let random_array: string[] = getRandomInfo()
+const random_array: string[] = getRandomInfo();
 
 // the elements to be filled out
-let text: HTMLCollection = document.getElementsByClassName("demo")
+const text: HTMLCollection = document.getElementsByClassName("demo");
 
 function typeWriter() {
 
-  let speed: number = 20; /* The speed/duration of the effect in milliseconds */
+  const speed: number = 20; /* The speed/duration of the effect in milliseconds */
 
   for (let index: number = 0; index < random_array.length; index++) {
     const element: string = random_array[index];
@@ -32,12 +31,12 @@ function typeWriter() {
 
 
 function getRandomInfo() {
-    let random_array: string[] = [favorite_movies, fun_facts, reading_list][Math.floor(Math.random() * 3)];
+    const random_array: string[] = [favorite_movies, fun_facts, reading_list][Math.floor(Math.random() * 3)];
     for (let i: number = 0; i < random_array.length; i++) {
     // Generate random number
-          let j: number = Math.floor(Math.random() * (i + 1));
+          const j: number = Math.floor(Math.random() * (i + 1));
     if (i != 0 && j != 0) {
-        let temp = random_array[i];
+        const temp = random_array[i];
         random_array[i] = random_array[j];
         random_array[j] = temp;
         }

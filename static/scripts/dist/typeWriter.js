@@ -3,10 +3,10 @@ const favorite_movies = ['Movies I Like', 'Hackers (1995)', 'In the Mood for Lov
 const fun_facts = ['Facts About Me', 'I like fighting games', 'My bones break embarrassingly easily', 'I was a Weezer fan (derogatory) in high school', 'I\'ve gotten better about going to the gym recently', 'I have a dog named Copper'];
 const reading_list = ['Useful Readings', 'Weapons of Math Destruction (2016)', 'The Critical Engineering Manifesto (2011)', 'The Soul of Man Under Socialism (1891)', 'Glitch Feminism: A Manifesto (2020)', 'Manufacturing Consent (1988)'];
 let i = 0;
-let random_array = getRandomInfo();
-let text = document.getElementsByClassName("demo");
+const random_array = getRandomInfo();
+const text = document.getElementsByClassName("demo");
 function typeWriter() {
-    let speed = 20;
+    const speed = 20;
     if (i < 50) {
         text[0].innerHTML += random_array[0].charAt(i);
         i++;
@@ -29,11 +29,11 @@ function typeWriter() {
     }
 }
 function getRandomInfo() {
-    let random_array = [favorite_movies, fun_facts, reading_list][Math.floor(Math.random() * 3)];
+    const random_array = [favorite_movies, fun_facts, reading_list][Math.floor(Math.random() * 3)];
     for (let i = 0; i < random_array.length; i++) {
-        let j = Math.floor(Math.random() * (i + 1));
+        const j = Math.floor(Math.random() * (i + 1));
         if (i != 0 && j != 0) {
-            let temp = random_array[i];
+            const temp = random_array[i];
             random_array[i] = random_array[j];
             random_array[j] = temp;
         }
