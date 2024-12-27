@@ -1,0 +1,40 @@
+#postHeader {
+    font-size: 3em;
+    max-width: 50%;
+    margin: auto;
+}
+
+nav a {
+    width: 100%;
+}
+
+
+a {
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px solid white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+#title {
+    display: inline;
+    font-size: 1em;
+    float: right;
+}
+
+@media (max-width: 500px) {
+#title {
+    display: block;
+    float: none;
+    font-size: 1.5em;
+    margin-bottom: 3vh;
+}
+
+a {
+    padding: 5px;
+    border-left: 1px solid white;
+}
+
+}

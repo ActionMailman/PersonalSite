@@ -1,0 +1,28 @@
+
+@media screen and (min-width: 600px) {
+    body {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+body {
+    width: 90%;
+    margin: auto;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+a {
+    display: inline;
+}
+
+#title {
+    display: inline;
+    font-size: 1em;
+    float: right;
+}
+

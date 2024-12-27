@@ -1,5 +1,6 @@
 import { Application, Router } from "jsr:@oak/oak@^17.1.3";
 import { marked } from 'https://deno.land/x/marked/mod.ts';
+import markedFootnote from 'marked-footnote'
 import { extract } from "https://deno.land/std@0.145.0/encoding/front_matter.ts";
 
 interface Post {
@@ -35,7 +36,6 @@ async function getPosts() : Promise<Post[]> {
     return posts;
 }
 const posts: Post[] = await getPosts();
-console.log(posts);
 function outputPreviewAsString() : string {
     let finalHTMLContent: string = "";
     for (let i = 0; i < posts.length; i++) {
@@ -51,7 +51,7 @@ function outputPreviewAsString() : string {
 function fillPostContent(post: Post) : string {
     let finalHTMLContent: string = "";
     finalHTMLContent += `<h1>${post.title}</h1>`;
-    finalHTMLContent += `${marked.parse(post.content)}`;
+    finalHTMLContent += `${marked.use(markedFootnote()).parse(post.content)}`;
     return finalHTMLContent;
 }
 
@@ -68,7 +68,6 @@ app.use(async (_ctx, next) => {
 // error handler I suppose..?
 
 router.get('/posts', (ctx) => {
-    console.log("Hello!");
         ctx.response.body = `
                             <!DOCTYPE html>
                             <html>
@@ -77,10 +76,17 @@ router.get('/posts', (ctx) => {
                             <meta content="width=device-width, initial-scale=1" name="viewport" />
                             <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
                             <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Source+Code+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
-                            <link rel="stylesheet" href="./styles/globalStyle.css">    
+                            <link rel="stylesheet" href="./styles/globalStyle.css"> 
+                            <link rel="stylesheet" href="./blog/styles/collectedPages.css">    
                             <title>Posts</title>
                             </head>
                             <body>
+                                <nav>
+                                <li id="title">
+                                <a href="/">Viyan</a>
+                                </li>
+                                </nav>
+                            <h1 id="postHeader"> Stuff I've Written </h1>
                             ${outputPreviewAsString()}
                             </body>
                             </html> `;
@@ -96,10 +102,16 @@ for (let i = 0; i < posts.length; i++) {
                             <meta content="width=device-width, initial-scale=1" name="viewport" />
                             <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
                             <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Source+Code+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
-                            <link rel="stylesheet" href="./styles/globalStyle.css">    
+                            <link rel="stylesheet" href="./styles/globalStyle.css">
+                            <link rel="stylesheet" href="/blog/styles/individualPage.css">    
                             <title>Posts</title>
                             </head>
                             <body>
+                            <nav>
+                            <li id="title">
+                            <a href="/posts">Go Back</a>
+                            </li>
+                            </nav>                            
                             ${fillPostContent(posts[i])}
                             </body>
                             </html> `;
