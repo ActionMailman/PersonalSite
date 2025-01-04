@@ -1,7 +1,10 @@
 import { Application, Router } from "jsr:@oak/oak@^17.1.3";
 import { marked } from 'https://deno.land/x/marked/mod.ts';
-import markedFootnote from 'marked-footnote'
+import markedFootnote from 'marked-footnote';
+import markedImages from "marked-images";
 import { extract } from "https://deno.land/std@0.145.0/encoding/front_matter.ts";
+
+marked.use(markedImages);
 
 interface Post {
     slug: string;
@@ -117,6 +120,8 @@ for (let i = 0; i < posts.length; i++) {
                             </html> `;
     });
 }
+
+
 
 
 app.use(router.routes());

@@ -16,6 +16,7 @@
     "jsr:@std/path@1": "1.0.8",
     "npm:@types/node@*": "22.5.4",
     "npm:marked-footnote@^1.2.4": "1.2.4_marked@15.0.4",
+    "npm:marked-images@^3.1.0": "3.1.0_marked@4.3.0",
     "npm:marked@*": "15.0.4",
     "npm:path-to-regexp@6.2.1": "6.2.1"
   },
@@ -83,14 +84,27 @@
         "undici-types"
       ]
     },
+    "lodash.startswith@4.2.1": {
+      "integrity": "sha512-XClYR1h4/fJ7H+mmCKppbiBmljN/nGs73iq2SjCT9SF4CBPoUHzLvWmH1GtZMhMBZSiRkHXfeA2RY1eIlJ75ww=="
+    },
     "marked-footnote@1.2.4_marked@15.0.4": {
       "integrity": "sha512-DB2Kl+wFh6YwZd70qABMY6WUkG1UuyqoNTFoDfGyG79Pz24neYtLBkB+45a7o72V7gkfvbC3CGzIYFobxfMT1Q==",
       "dependencies": [
-        "marked"
+        "marked@15.0.4"
+      ]
+    },
+    "marked-images@3.1.0_marked@4.3.0": {
+      "integrity": "sha512-riXw+1pK2hmS9VegEostfz0yKhyOAV6GNb9vBmYLeGCXuGZ2AMrIZF6iXw6AoswvdCVUb2Sh8VM+IzunIxSb/Q==",
+      "dependencies": [
+        "lodash.startswith",
+        "marked@4.3.0"
       ]
     },
     "marked@15.0.4": {
       "integrity": "sha512-TCHvDqmb3ZJ4PWG7VEGVgtefA5/euFmsIhxtD0XsBxI39gUSKL81mIRFdt0AiNQozUahd4ke98ZdirExd/vSEw=="
+    },
+    "marked@4.3.0": {
+      "integrity": "sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A=="
     },
     "path-to-regexp@6.2.1": {
       "integrity": "sha512-JLyh7xT1kizaEvcaXOQwOc2/Yhw6KZOvPf1S8401UyLk86CU79LN3vl7ztXGm/pZ+YjoyAJ4rxmHwbkBXJX+yw=="
@@ -199,7 +213,8 @@
   "workspace": {
     "dependencies": [
       "jsr:@oak/oak@^17.1.3",
-      "npm:marked-footnote@^1.2.4"
+      "npm:marked-footnote@^1.2.4",
+      "npm:marked-images@^3.1.0"
     ]
   }
 }

@@ -167,7 +167,7 @@ The same ways in which our ordinary preoccupations can bleed into and remain unc
 
 [^43]: Russell, 3.
 
-![](media/3b6be56814c3a507ff89116df53dd9e2.png)
+![](./blog/media/br_1.png)
 
 Figure 1.[^44]
 
@@ -181,13 +181,13 @@ Of course, the first feature is present in this scene, where a speculative accou
 
 What’s notable for the second feature, of how the ordinary is left unaffected by the changes, is that the Voight-Kampff test is not only philosophically reminiscent of the Turing test, but *ordinarily* reminiscent of a polygraph in a police interrogation. Leon is inhuman, not only because he’s a replicant, but also because he is a suspect to be interrogated, a cache of hidden secrets that all noir protagonists encounter in their quests for truth. *Blade Runner* reminds us of how we are able to treat people in the context of discovering their possible inhumanity doesn’t significantly differ from the way we treat them when trying to unearth any other lies they might be telling us. The more things change, the more they remain the same.
 
-![](media/91fbfac40070cc954c56cbbc84683962.png)
+![](./blog/media/br_2.png)
 
 Figure 2.[^46]
 
 [^46]: *Blade Runner, 20:24.*
 
-![](media/413f6d90c00f6075aba9c1296af805ba.png)
+![](./blog/media/br_3.png)
 
 Figure 3.[^47]
 
