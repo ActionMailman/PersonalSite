@@ -88,18 +88,27 @@ This suggestion isn’t meant to be revolutionary, but is rather meant to be an 
 
 
 
-References
+## References
+
 AI is Helping Less Bad | Less Bad. (2023, April 13). Retrieved from
 https://www.lessbad.org/site/ai-help-less-bad/
+
 Chagnon, C. W., Durante, F., Gills, B. K., Hagolani-Albov, S. E., Hokkanen, S., Kangasluoma, S. M. J., Konttinen, H., Kröger, M., LaFleur, W., Ollinaho, O., & Vuola, M. P. S. (2022). From Extractivism to Global Extractivism: The Evolution of an Organizing concept. The Journal of Peasant Studies, 49(4), 760-792. https://doi.org/10.1080/03066150.2022.2069015
+
 Filipenco, D. (2024, January 23). The biggest social issues that affect modern society. DevelopmentAid. https://www.developmentaid.org/news-stream/post/173559/social-issues-that-affect-modern-society
+
 Heidegger, M. (2008). The Question Concerning Technology. In D. F. Krell (Ed.), Basic Writings (pp. 287-317). HarperCollins. (Original work published 1954)
 Online Etymology Dictionary. (2024). Retrieved January 24, 2025, from
 https://www.etymonline.com/word/technology 
+
 Poonamallee, L., Scillitoe, J., & Joy, S. (Eds.). (2020). Socio-Tech Innovation: Harnessing Technology for Social Good. Springer International Publishing. https://doi.org/10.1007/978-3-030-39554-4
+
 Scillitoe, J. L., Poonamallee, L., & Joy, S. (2018). Balancing Market Versus Social Strategic Orientations in Socio-tech Ventures as Part of the Technology Innovation Adoption Process - Examples from the Global Healthcare Sector. Journal of Social Entrepreneurship, 9(3), 257-287. https://doi.org/10.1080/19420676.2018.1498378
+
 Simondon, G. (2017). On the Mode of Existence of Technical Objects (C. Malaspina & J. Rogove, Trans.). University of Minnesota Press. (Original work published 1958)
+
 Wittgenstein, L. (2009). Philosophical Investigations (G. E. M. Anscombe, P. M. S. Hacker, & J. Schulte, Trans.; 4th ed.). Wiley-Blackwell. (Originally work published in 1953)
+
 Worried About the State of the World? | Less Bad (2023, May 5). Retrieved from
 	https://www.lessbad.org/
 
