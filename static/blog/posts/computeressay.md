@@ -1,6 +1,6 @@
 ---
 title: Computers as Written Documents
-publish_date: 2023-2-11
+publish_date: 2023-7-11
 description: Essay written for class about computers in relation to orality, writing, and technical information systems.
 ---
 

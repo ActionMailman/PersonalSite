@@ -5,7 +5,7 @@ import markedImages from "marked-images";
 import { extract } from "https://deno.land/std@0.145.0/encoding/front_matter.ts";
 
 marked.use(markedImages);
-
+// interface for post information to be stored and used
 interface Post {
     slug: string;
     title: string;
@@ -70,6 +70,9 @@ app.use(async (_ctx, next) => {
   });
 // error handler I suppose..?
 
+
+// collected posts page
+
 router.get('/posts', (ctx) => {
         ctx.response.body = `
                             <!DOCTYPE html>
@@ -91,9 +94,17 @@ router.get('/posts', (ctx) => {
                                 </nav>
                             <h1 id="postHeader"> Stuff I've Written </h1>
                             ${outputPreviewAsString()}
+                            ${wittPage}
                             </body>
                             </html> `;
 });
+
+
+const wittPage = `<a href="https://wittgenstein.herokuapp.com"><div class="pageBlock">
+                    <h1>Why Computer Scientists Should Read Wittgenstein </h1>
+                    <h4>My undergraduate capstone on the importance of Ludwig Wittgenstein (in particular his late work) to the history of computer science and artificial intelligence.</h4>
+                    <p>5/10/2023</p>
+                    </div></a>`;
 
 for (let i = 0; i < posts.length; i++) { 
     router.get(`/${posts[i].slug}`, (ctx) => {
