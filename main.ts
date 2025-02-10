@@ -14,6 +14,7 @@ interface Post {
     description: string;
 }
 
+// function for getting the necessary metadata data of the .md files, meant more as a helper function for getPosts()
 async function getPost(slug: string): Promise<Post> {
     const text = await Deno.readTextFile((`./static/blog/posts/${slug}.md`));
     const { body, attrs } = extract(text);
@@ -26,7 +27,7 @@ async function getPost(slug: string): Promise<Post> {
     };
 }
 
-
+// runs the above function in repitition
 async function getPosts() : Promise<Post[]> {
     const files = Deno.readDir("./static/blog/posts");
     const promises = [];
@@ -38,7 +39,10 @@ async function getPosts() : Promise<Post[]> {
     posts.sort((a, b) => b.date.getTime() - a.date.getTime());
     return posts;
 }
+
+
 const posts: Post[] = await getPosts();
+// for generating the post block HTML
 function outputPreviewAsString() : string {
     let finalHTMLContent: string = "";
     for (let i = 0; i < posts.length; i++) {
@@ -51,6 +55,7 @@ function outputPreviewAsString() : string {
     return finalHTMLContent;
 }
 
+// for populating the actual posts themselves with the necessary content
 function fillPostContent(post: Post) : string {
     let finalHTMLContent: string = "";
     finalHTMLContent += `<h1>${post.title}</h1>`;
@@ -68,8 +73,16 @@ app.use(async (_ctx, next) => {
           console.log(err)
     }
   });
-// error handler I suppose..?
+// error handler I suppose..? Good to keep around but it hasn't gone off yet so I'm not sure 
 
+
+// variable for the wittgenstein page since instead of being a generated blog post it necessarily leads to a different site, meaning the href on the a needs to be given manually
+
+const wittPage = `<a href="https://wittgenstein.herokuapp.com"><div class="pageBlock">
+                    <h1>Why Computer Scientists Should Read Wittgenstein </h1>
+                    <h4>My undergraduate capstone on the importance of Ludwig Wittgenstein (in particular his late work) to the history of computer science and artificial intelligence.</h4>
+                    <p>5/10/2023</p>
+                    </div></a>`;
 
 // collected posts page
 
@@ -100,11 +113,8 @@ router.get('/posts', (ctx) => {
 });
 
 
-const wittPage = `<a href="https://wittgenstein.herokuapp.com"><div class="pageBlock">
-                    <h1>Why Computer Scientists Should Read Wittgenstein </h1>
-                    <h4>My undergraduate capstone on the importance of Ludwig Wittgenstein (in particular his late work) to the history of computer science and artificial intelligence.</h4>
-                    <p>5/10/2023</p>
-                    </div></a>`;
+
+
 
 for (let i = 0; i < posts.length; i++) { 
     router.get(`/${posts[i].slug}`, (ctx) => {
@@ -137,6 +147,9 @@ for (let i = 0; i < posts.length; i++) {
 
 app.use(router.routes());
 app.use(router.allowedMethods());
+// my extraordinarily clunky way of trying to give access to static HTML 
+// files while still using dynamic generation like above. This was the best I could come up with based
+//  on how Deno's libraries seem to allow this sort of thing, but I'm sure there's a better way.
 app.use(async (ctx) => {
     try {
         await ctx.send({
